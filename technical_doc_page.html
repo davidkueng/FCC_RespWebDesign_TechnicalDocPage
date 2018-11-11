@@ -9,25 +9,26 @@
 </head>
 <body>    
 
+    <div id="components">
         <nav id="navbar">
             <header>
                 <h1>JS Basics Documentation</h1>
             </header>
             <!-- when clicking the link navigate to section of site -->    
-            <a href="" class="nav-link">topic1</a>
-            <a href="" class="nav-link">topic0</a>
-            <a href="" class="nav-link">topic2</a>
-            <a href="" class="nav-link">topic3</a>
-            <a href="" class="nav-link">topic4</a>
+            <a href="#Basics" class="nav-link">Basics</a>
+            <a href="#Data_structures_and_types" class="nav-link">Data structures and types</a>
+            <a href="#Conditional_statements" class="nav-link">Conditional statements</a>
+            <a href="#Functions" class="nav-link">Functions</a>
+            <a href="#Loops_and_iteration" class="nav-link">Loops and iteration</a>
         </nav>  
 
-    <div id="main-doc">
+    <main id="main-doc">
 
             <!-- The .main-section elements should contain at least 10 p elements total (not each).
             The .main-section elements should contain at least 5 code elements total (not each).
             The .main-section elements should contain at least 5 li items total (not each). -->
 
-        <div class="main-section" id="describe-topic">
+        <section class="main-section" id="Basics">
             <header><h2>Basics</h2></header>
             <p>JavaScript borrows most of its syntax from Java, but is also influenced by Awk, Perl and
                Python. </p>
@@ -50,8 +51,8 @@
             <p>The source text of JavaScript script gets scanned from left to right and is converted
                into a sequence of input elements which are tokens, control characters, line terminators, 
                comments, or whitespace. Spaces, tabs, and newline characters are considered whitespace.</p>
-        </div>
-        <div class="main-section" id="describe-topic1">
+        </section>
+        <section class="main-section" id="Data_structures_and_types">
             <header> <h2>Data structures and types</h2></header>
             
             <ul>
@@ -77,8 +78,8 @@
             and functions as procedures that your application can perform.</p>
 
 
-        </div>
-        <div class="main-section" id="describe-topic2">
+        </section>
+        <section class="main-section" id="Conditional_statements">
             <header><h2>Conditional statements</h2></header>
 
             <p>A conditional statement is a set of commands that executes if a specified condition 
@@ -111,7 +112,7 @@
                       } else if (condition_n) { <br>
                         statement_n;    <br>
                       } else {  <br>
-                        statement_last; 
+                        statement_last; <br>
                       } </code>
 
             <p>In the case of multiple conditions only the first logical condition which evaluates to 
@@ -124,11 +125,11 @@
                     statement_2_runs_if_condition_is_true; <br>
                   } else { <br>
                     statement_3_runs_if_condition_is_false; <br>
-                    statement_4_runs_if_condition_is_false; 
+                    statement_4_runs_if_condition_is_false; <br>
                   }</code>
 
-        </div>
-        <div class="main-section" id="describe-topic3">
+        </section>
+        <section class="main-section" id="Functions">
             <header> <h2>Functions</h2> </header>
 
             <p>A function definition (also called a function declaration, or function statement) 
@@ -150,8 +151,8 @@
         (that is, number) multiplied by itself. The statement return specifies the value returned by the function.</p>
 
 
-        </div>
-        <div class="main-section" id="describe-topic4">
+        </section>
+        <section class="main-section" id="Loops_and_iteration">
             <header> <h2>Loops and iteration</h2> </header>
 
             <p>You can think of a loop as a computerized version of the game where you tell someone to 
@@ -183,9 +184,16 @@
                 <li>for...of statement</li>
             </ul>
 
-        </div>
+        </section>
 
-    </div>
+        <hr>
+
+        <footer id="footer">Excerpts from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+        MDN</a></footer>
+
+        </main> 
+
+</div>
 
     <!-- On regular sized devices (laptops, desktops), the element with id="navbar" 
         should be shown on the left side of the screen and should always be visible to the user. -->
