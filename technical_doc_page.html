@@ -5,24 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Technical Documentation Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="technical_doc_page.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="technical_doc_page.css" />  
 </head>
-<body>
+<body>    
 
-<nav id="navbar">
-    <header>
-        describe topic of doc
-    </header>
-
-    <!-- when clicking the link navigate to section of site -->
-    
-    <a href="" class="nav-link">topic1</a>
-    <a href="" class="nav-link">topic0</a>
-    <a href="" class="nav-link">topic2</a>
-    <a href="" class="nav-link">topic3</a>
-    <a href="" class="nav-link">topic4</a>
-</nav>
+        <nav id="navbar">
+            <header>
+                <h1>JS Basics Documentation</h1>
+            </header>
+            <!-- when clicking the link navigate to section of site -->    
+            <a href="" class="nav-link">topic1</a>
+            <a href="" class="nav-link">topic0</a>
+            <a href="" class="nav-link">topic2</a>
+            <a href="" class="nav-link">topic3</a>
+            <a href="" class="nav-link">topic4</a>
+        </nav>  
 
     <div id="main-doc">
 
@@ -31,24 +28,167 @@
             The .main-section elements should contain at least 5 li items total (not each). -->
 
         <div class="main-section" id="describe-topic">
-            <header>Describe topic of the section</header>
+            <header><h2>Basics</h2></header>
+            <p>JavaScript borrows most of its syntax from Java, but is also influenced by Awk, Perl and
+               Python. </p>
+               
+            <p>JavaScript is case-sensitive and uses the Unicode character set. For example, the word Früh 
+                (which means "early" in German) could be used as a variable name.</p>
+
+                <code> var früh = "foobar"</code>
+
+            <p>But, the variable früh is not the same as Früh because JavaScript is case sensitive.
+               In JavaScript, instructions are called statements and are separated by semicolons (;).
+                            
+            <p>A semicolon is not necessary after a statement if it is written on its own line. But if more 
+               than one statement on a line is desired, then they must be separated by semicolons. 
+               ECMAScript also has rules for automatic insertion of semicolons (ASI) to end statements. (For more information, 
+               see the detailed reference about JavaScript's lexical grammar.) It is considered best practice, however, 
+               to always write a semicolon after a statement, even when it is not strictly needed. This practice reduces 
+               the chances of bugs getting into the code.</p>
+                            
+            <p>The source text of JavaScript script gets scanned from left to right and is converted
+               into a sequence of input elements which are tokens, control characters, line terminators, 
+               comments, or whitespace. Spaces, tabs, and newline characters are considered whitespace.</p>
         </div>
         <div class="main-section" id="describe-topic1">
-            <header>Describe topic of the section</header>
+            <header> <h2>Data structures and types</h2></header>
+            
+            <ul>
+                <li>Six data types that are primitives:
+                    <ul>
+                        <li>Boolean. <code>true</code> and <code>false</code>.</li>
+                        <li>null. A special keyword denoting a null value. Because JavaScript is 
+                            case-sensitive, <code>null</code> is not the same as <code>Null</code>, <code>NULL</code>, 
+                            or any other variant.</li>
+                        <li>undefined. A top-level property whose value is not defined.</li>
+                        <li>Number. An integer or floating point number. For example: <code>42</code> 
+                            or <code>3.14159</code>.</li>
+                        <li>String. A sequence of characters that represent a text value. For example: "Howdy"</li>
+                        <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+                    </ul>
+                </li>
+                <li>and Object</li>
+            </ul>
+
+            <p>Although these data types are relatively few, they enable you to perform useful 
+            functions with your applications. Objects and functions are the other fundamental 
+            elements in the language. You can think of objects as named containers for values, 
+            and functions as procedures that your application can perform.</p>
+
+
         </div>
         <div class="main-section" id="describe-topic2">
-            <header>Describe topic of the section</header>
+            <header><h2>Conditional statements</h2></header>
+
+            <p>A conditional statement is a set of commands that executes if a specified condition 
+            is true. JavaScript supports two conditional statements:<code> if...else</code> 
+            and<code> switch</code>.</p>
+
+            <h3>if...else statement</h3>
+            
+            <p>Use the <code>if</code> statement to execute a statement if a logical condition is true. 
+            Use the optional <code>else</code> clause to execute a statement if the condition is false. 
+            An <code>if</code> statement looks as follows:</p>
+
+                <code>if (condition) { <br>
+                        statement_1; <br>
+                      } else {  <br>
+                        statement_2; <br>
+                      }</code>
+
+            <p>Here the condition can be any expression that evaluates to true or false. See 
+            Boolean for an explanation of what evaluates to true and false. If condition evaluates
+            to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and 
+            statement_2 can be any statement, including further nested if statements.
+            You may also compound the statements using else if to have multiple conditions tested 
+            in sequence, as follows:</p>
+
+                <code>if (condition_1) { <br>
+                        statement_1;    <br>
+                      } else if (condition_2) { <br>
+                        statement_2;    <br>
+                      } else if (condition_n) { <br>
+                        statement_n;    <br>
+                      } else {  <br>
+                        statement_last; 
+                      } </code>
+
+            <p>In the case of multiple conditions only the first logical condition which evaluates to 
+            true will be executed. To execute multiple statements, group them within a block statement 
+            ({ ... }) . In general, it's good practice to always use block statements, especially when 
+            nesting if statements:</p>
+
+            <code>if (condition) { <br>
+                    statement_1_runs_if_condition_is_true; <br>
+                    statement_2_runs_if_condition_is_true; <br>
+                  } else { <br>
+                    statement_3_runs_if_condition_is_false; <br>
+                    statement_4_runs_if_condition_is_false; 
+                  }</code>
+
         </div>
         <div class="main-section" id="describe-topic3">
-            <header>Describe topic of the section</header>
+            <header> <h2>Functions</h2> </header>
+
+            <p>A function definition (also called a function declaration, or function statement) 
+                consists of the function keyword, followed by: </p>
+            <ul>                
+                <li>The name of the function.</li>
+                <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+            </ul>
+
+        <p>For example, the following code defines a simple function named square:</p>
+
+        <code>function square(number) { <br>
+                return number * number; <br>
+              }</code>
+
+        <p>The function <strong>square</strong> takes one parameter, called <strong>number</strong>. 
+        The function consists of one statement that says to return the parameter of the function 
+        (that is, number) multiplied by itself. The statement return specifies the value returned by the function.</p>
+
+
         </div>
         <div class="main-section" id="describe-topic4">
-            <header>Describe topic of the section</header>
+            <header> <h2>Loops and iteration</h2> </header>
+
+            <p>You can think of a loop as a computerized version of the game where you tell someone to 
+            take X steps in one direction then Y steps in another; for example, the idea "Go five steps 
+            to the east" could be expressed this way as a loop:</p>
+
+            <code>var step; <br>
+                    for (step = 0; step < 5; step++) { <br>
+                      // Runs 5 times, with values of step 0 through 4. <br>
+                      console.log('Walking east one step'); <br>
+                    }</code>
+
+            <p>There are many different kinds of loops, but they all essentially do the same thing: 
+            they repeat an action some number of times (and it's actually possible that number could 
+            be zero). The various loop mechanisms offer different ways to determine the start and end 
+            points of the loop. There are various situations that are more easily served by one type of 
+            loop over the others.</p>
+
+            <p>The statements for loops provided in JavaScript are:</p>
+
+            <ul>
+                <li>for statement</li>
+                <li>do...while statement</li>
+                <li>while statement</li>
+                <li>labeled statement</li>
+                <li>break statement</li>
+                <li>continue statement</li>
+                <li>for...in statement</li>
+                <li>for...of statement</li>
+            </ul>
+
         </div>
 
     </div>
 
-    <!-- On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
+    <!-- On regular sized devices (laptops, desktops), the element with id="navbar" 
+        should be shown on the left side of the screen and should always be visible to the user. -->
     <!-- My Technical Documentation page should use at least one media query. -->
 
 
